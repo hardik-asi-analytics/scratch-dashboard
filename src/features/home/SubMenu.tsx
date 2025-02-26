@@ -18,7 +18,7 @@
  */
 import { ReactNode, useState, useEffect, FunctionComponent } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { styled, SupersetTheme, css, t } from '@superset-ui/core';
 import cx from 'classnames';
 import { Tooltip } from 'src/components/Tooltip';
@@ -205,7 +205,7 @@ const SubMenuComponent: FunctionComponent<SubMenuProps> = props => {
                     className={tab.name === props.activeChild ? 'active' : ''}
                   >
                     <div>
-                      {/* <Link to={tab.url || ''}>{tab.label}</Link> */}
+                      <Link to={tab.url || ''}>{tab.label}</Link>
                     </div>
                   </div>
                 </Menu.Item>
