@@ -91,7 +91,7 @@ export const setFilterConfiguration =
         type: SET_NATIVE_FILTERS_CONFIG_COMPLETE,
         filterChanges: response.result,
       });
-      dispatch(setDataMaskForFilterChangesComplete(filterChanges, oldFilters));
+      dispatch(setDataMaskForFilterChangesComplete(filterChanges, oldFilters) as any);
     } catch (err) {
       dispatch({
         type: SET_NATIVE_FILTERS_CONFIG_FAIL,

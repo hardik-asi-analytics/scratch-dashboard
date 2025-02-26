@@ -31,7 +31,7 @@ export default [
       typescript({ useTsconfigDeclarationDir: true }),
       babel({
         extensions: ['.js', '.jsx', '.ts', '.tsx'], // <-- Ensure Babel processes .tsx files
-        babelHelpers: 'bundled',
+        babelHelpers: 'runtime',
         exclude: 'node_modules/**',
         presets: ['@babel/preset-env', '@babel/preset-react'], // <-- Ensure React preset is included
       }),

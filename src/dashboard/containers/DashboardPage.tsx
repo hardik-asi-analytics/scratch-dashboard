@@ -19,7 +19,7 @@
 import { createContext, lazy, FC, useEffect, useMemo, useRef } from 'react';
 import { Global } from '@emotion/react';
 import { t, useTheme } from '@superset-ui/core';
-import { useDispatch, useSelector } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { createSelector } from '@reduxjs/toolkit';
 import { useToasts } from 'src/components/MessageToasts/withToasts';
 import Loading from 'src/components/Loading';
@@ -266,4 +266,4 @@ export const DashboardPage: FC<PageProps> = ({ idOrSlug }: PageProps) => {
   );
 };
 
-export default DashboardPage;
+export default connect()(DashboardPage);

@@ -373,7 +373,7 @@ const ELEMENT_ON_SCREEN_OPTIONS = {
 };
 
 const DashboardBuilder = () => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const uiConfig = useUiConfig();
   const theme = useTheme();
 
@@ -421,7 +421,7 @@ const DashboardBuilder = () => {
   }, [dashboardLayout, dispatch]);
 
   const handleDrop = useCallback(
-    dropResult => dispatch(handleComponentDrop(dropResult)),
+    (dropResult: any) => dispatch(handleComponentDrop(dropResult)),
     [dispatch],
   );
 
@@ -580,7 +580,7 @@ const DashboardBuilder = () => {
       : theme.gridUnit * 8;
 
   const renderChild = useCallback(
-    adjustedWidth => {
+    (adjustedWidth: any) => {
       const filterBarWidth = dashboardFiltersOpen
         ? adjustedWidth
         : CLOSED_FILTER_BAR_WIDTH;
