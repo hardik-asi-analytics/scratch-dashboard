@@ -137,7 +137,7 @@ const FilterBar: FC<FiltersBarProps> = ({
   const dataMaskApplied: DataMaskStateWithId = useNativeFiltersDataMask();
   const [dataMaskSelected, setDataMaskSelected] =
     useImmer<DataMaskStateWithId>(dataMaskApplied);
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const [updateKey, setUpdateKey] = useState(0);
   const tabId = useTabId();
   const filters = useFilters();

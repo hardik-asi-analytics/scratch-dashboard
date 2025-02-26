@@ -153,7 +153,7 @@ function FiltersConfigModal({
   onSave,
   onCancel,
 }: FiltersConfigModalProps) {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const theme = useTheme();
 
   const [form] = AntdForm.useForm<NativeFiltersForm>();
@@ -634,7 +634,7 @@ function FiltersConfigModal({
   }, [currentFilterId]);
 
   const handleActiveFilterPanelChange = useCallback(
-    key => setActiveFilterPanelKey(key),
+    (key: any) => setActiveFilterPanelKey(key),
     [setActiveFilterPanelKey],
   );
 

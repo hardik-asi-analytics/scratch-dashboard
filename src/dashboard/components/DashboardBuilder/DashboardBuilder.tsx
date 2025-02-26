@@ -618,7 +618,7 @@ const DashboardBuilder = () => {
 
   return (
     <DashboardWrapper>
-      {showFilterBar &&
+      {showFilterBar ? 
         filterBarOrientation === FilterBarOrientation.Vertical && (
           <>
             <ResizableSidebar
@@ -631,7 +631,7 @@ const DashboardBuilder = () => {
               {renderChild}
             </ResizableSidebar>
           </>
-        )}
+        ) : null}
       <StyledHeader ref={headerRef}>
         {/* @ts-ignore */}
         <Droppable
@@ -715,7 +715,7 @@ const DashboardBuilder = () => {
           </StyledDashboardContent>
         </DashboardContentWrapper>
       </StyledContent>
-      {dashboardIsSaving && (
+      {dashboardIsSaving ? (
         <Loading
           css={css`
             && {
@@ -723,7 +723,7 @@ const DashboardBuilder = () => {
             }
           `}
         />
-      )}
+      ) : null}
     </DashboardWrapper>
   );
 };

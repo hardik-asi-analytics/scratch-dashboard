@@ -42,7 +42,7 @@ export const useFilterConfigModal = ({
   dashboardId,
   initialFilterId,
 }: UseFilterConfigModalProps): UseFilterConfigModalReturn => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const [isFilterConfigModalOpen, setIsFilterConfigModalOpen] = useState(false);
 
   const openFilterConfigModal = useCallback(() => {

@@ -86,7 +86,7 @@ const BuilderComponentPane = ({ topOffset = 0 }) => (
           <NewDivider />
           {dashboardComponents
             .getAll()
-            .map(({ key: componentKey, metadata }) => (
+            .map(({ key: componentKey, metadata }: any) => (
               <NewDynamicComponent
                 metadata={metadata}
                 componentKey={componentKey}
