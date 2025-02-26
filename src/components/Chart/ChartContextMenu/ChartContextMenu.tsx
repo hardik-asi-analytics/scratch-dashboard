@@ -93,7 +93,7 @@ const ChartContextMenu = (
   ref: RefObject<ChartContextMenuRef>,
 ) => {
   const theme = useTheme();
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const { canDrillToDetail, canDrillBy, canDownload } = usePermissions();
 
   const crossFiltersEnabled = useSelector<RootState, boolean>(

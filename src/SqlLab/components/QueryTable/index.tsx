@@ -78,7 +78,7 @@ const QueryTable = ({
   latestQueryId,
 }: QueryTableProps) => {
   const theme = useTheme();
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
 
   const QUERY_HISTORY_TABLE_HEADERS_LOCALIZED = {
     state: t('State'),

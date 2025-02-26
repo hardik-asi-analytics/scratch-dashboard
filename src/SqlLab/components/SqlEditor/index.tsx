@@ -260,7 +260,7 @@ const SqlEditor: FC<Props> = ({
   scheduleQueryWarning,
 }) => {
   const theme = useTheme();
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
 
   const {
     database,

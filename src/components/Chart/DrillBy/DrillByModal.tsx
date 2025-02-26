@@ -70,7 +70,7 @@ interface ModalFooterProps {
 }
 
 const ModalFooter = ({ formData, closeModal }: ModalFooterProps) => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const { addDangerToast } = useToasts();
   const theme = useTheme();
   const [url, setUrl] = useState('');
@@ -165,7 +165,7 @@ export default function DrillByModal({
   onHideModal,
   canDownload,
 }: DrillByModalProps) {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const theme = useTheme();
   const { addDangerToast } = useToasts();
   const [isChartDataLoading, setIsChartDataLoading] = useState(true);

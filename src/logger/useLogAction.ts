@@ -22,7 +22,7 @@ import { useDispatch } from 'react-redux';
 import { logEvent } from 'src/logger/actions';
 
 export default function useLogAction(staticEventData: Record<string, any>) {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const logAction = useCallback<typeof logEvent>(
     (type, payload) =>
       dispatch(

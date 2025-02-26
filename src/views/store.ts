@@ -166,7 +166,7 @@ import {
       },
       middleware: getMiddleware,
       devTools: process.env.WEBPACK_MODE === 'development' && !disableDebugger,
-      enhancers: getDefaultEnhancers => 
+      enhancers: (getDefaultEnhancers: any) => 
         getDefaultEnhancers().concat(persistSqlLabStateEnhancer as StoreEnhancer),
       ...overrides,
     });

@@ -78,7 +78,7 @@ export const ScopingModal = ({
   isVisible,
   closeModal,
 }: ScopingModalProps) => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const chartLayoutItems = useChartLayoutItems();
   const chartIds = useChartIds();
   const [currentChartId, setCurrentChartId] = useState(initialChartId);

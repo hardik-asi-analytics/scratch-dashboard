@@ -53,7 +53,7 @@ export const createStore = (initialState: object = {}, reducers: object = {}) =>
       ...reducers,
       [api.reducerPath]: api.reducer,
     },
-    middleware: getDefaultMiddleware =>
+    middleware: (getDefaultMiddleware: any) =>
       getDefaultMiddleware().concat(api.middleware),
     devTools: false,
   });

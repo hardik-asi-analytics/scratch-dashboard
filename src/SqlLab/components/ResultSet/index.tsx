@@ -210,7 +210,7 @@ const ResultSet = ({
   const [alertIsOpen, setAlertIsOpen] = useState(false);
 
   const history = useHistory();
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const logAction = useLogAction({ queryId, sqlEditorId: query.sqlEditorId });
 
   const reRunQueryIfSessionTimeoutErrorOnMount = useCallback(() => {
@@ -275,7 +275,7 @@ const ResultSet = ({
         ...EXPLORE_CHART_DEFAULT,
         datasource: `${results.query_id}__query`,
         ...{
-          all_columns: results.columns.map(column => column.column_name),
+          all_columns: results.columns.map((column: any) => column.column_name),
         },
       });
       const url = mountExploreUrl(null, {
@@ -650,7 +650,7 @@ const ResultSet = ({
     }
     if (data && data.length > 0) {
       const expandedColumns = results.expanded_columns
-        ? results.expanded_columns.map(col => col.column_name)
+        ? results.expanded_columns.map((col: any) => col.column_name)
         : [];
       const allowHTML = getItem(
         LocalStorageKeys.SqllabIsRenderHtmlEnabled,
@@ -699,7 +699,7 @@ const ResultSet = ({
           <ResultTable
             data={data}
             queryId={query.id}
-            orderedColumnKeys={results.columns.map(col => col.column_name)}
+            orderedColumnKeys={results.columns.map((col: any) => col.column_name)}
             height={rowsHeight}
             filterText={searchText}
             expandedColumns={expandedColumns}

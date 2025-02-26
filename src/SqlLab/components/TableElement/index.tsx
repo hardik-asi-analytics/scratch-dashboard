@@ -105,7 +105,7 @@ const StyledCollapsePanel = styled(Collapse.Panel)`
 const TableElement = ({ table, ...props }: TableElementProps) => {
   const { dbId, catalog, schema, name, expanded } = table;
   const theme = useTheme();
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const {
     currentData: tableMetadata,
     isSuccess: isMetadataSuccess,

@@ -112,7 +112,7 @@ export default function HeaderReportDropDown({
   showReportModal,
   setCurrentReportDeleting,
 }: HeaderReportProps) {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const report = useSelector<any, AlertObject>(state => {
     const resourceType = dashboardId
       ? CreationMethod.Dashboards

@@ -75,7 +75,7 @@ const EditorAutoSync: FC = () => {
   const editorTabLastUpdatedAt = useSelector<SqlLabRootState, number>(
     state => state.sqlLab.editorTabLastUpdatedAt,
   );
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const lastSavedTimestampRef = useRef<number>(editorTabLastUpdatedAt);
 
   const currentQueryEditorId = useSelector<SqlLabRootState, string>(

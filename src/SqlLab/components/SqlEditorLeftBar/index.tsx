@@ -106,7 +106,7 @@ const SqlEditorLeftBar = ({
       sqlLab.tables.filter(table => table.queryEditorId === queryEditorId),
     shallowEqual,
   );
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const queryEditor = useQueryEditor(queryEditorId, [
     'dbId',
     'catalog',

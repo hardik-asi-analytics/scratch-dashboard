@@ -34,7 +34,7 @@ const CrossFilter = (props: {
 }) => {
   const { filter, orientation, last } = props;
   const theme = useTheme();
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
 
   const handleHighlightFilterSource = useCallback(
     (path?: string[]) => {

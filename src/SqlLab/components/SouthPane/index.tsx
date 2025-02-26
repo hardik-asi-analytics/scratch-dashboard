@@ -91,7 +91,7 @@ const SouthPane = ({
   displayLimit,
   defaultQueryLimit,
 }: SouthPaneProps) => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const { offline, tables } = useSelector(
     ({ sqlLab: { offline, tables } }: SqlLabRootState) => ({
       offline,
@@ -107,14 +107,14 @@ const SouthPane = ({
   const pinnedTables = useMemo(
     () =>
       tables.filter(
-        ({ queryEditorId: qeId }) => String(queryEditorId) === qeId,
+        ({ queryEditorId: qeId }: any) => String(queryEditorId) === qeId,
       ),
     [queryEditorId, tables],
   );
   const pinnedTableKeys = useMemo(
     () =>
       Object.fromEntries(
-        pinnedTables.map(({ id, dbId, catalog, schema, name }) => [
+        pinnedTables.map(({ id, dbId, catalog, schema, name }: any) => [
           id,
           [dbId, catalog, schema, name].join(':'),
         ]),
@@ -130,7 +130,7 @@ const SouthPane = ({
     (key, action) => {
       if (action === 'remove') {
         const table = pinnedTables.find(
-          ({ dbId, catalog, schema, name }) =>
+          ({ dbId, catalog, schema, name }: any) =>
             [dbId, catalog, schema, name].join(':') === key,
         );
         dispatch(removeTables([table]));
@@ -176,7 +176,7 @@ const SouthPane = ({
             latestQueryId={latestQueryId}
           />
         </Tabs.TabPane>
-        {pinnedTables.map(({ id, dbId, catalog, schema, name }) => (
+        {pinnedTables.map(({ id, dbId, catalog, schema, name }: any) => (
           <Tabs.TabPane
             tab={
               <>

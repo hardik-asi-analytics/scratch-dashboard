@@ -72,7 +72,7 @@ export function useKeywords(
     catalog,
     schema,
   });
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const hasFetchedKeywords = useRef(false);
   // skipFetch is used to prevent re-evaluating memoized keywords
   // due to updated api results by skip flag
@@ -118,7 +118,7 @@ export function useKeywords(
     shallowEqual,
   );
 
-  const store = useStore();
+  const store: any = useStore();
   const apiState = store.getState()[api.reducerPath];
 
   const allColumns = useMemo(() => {

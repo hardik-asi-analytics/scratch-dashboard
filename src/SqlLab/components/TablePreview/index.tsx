@@ -122,7 +122,7 @@ const renderWell = (partitions: TableMetaData['partitions']) => {
 };
 
 const TablePreview: FC<Props> = ({ dbId, catalog, schema, tableName }) => {
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const [databaseName, backend, disableDataPreview] = useSelector<
     SqlLabRootState,
     string[]

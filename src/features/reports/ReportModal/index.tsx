@@ -157,7 +157,7 @@ function ReportModal({
   );
   const [cronError, setCronError] = useState<CronError>();
 
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   // Report fetch logic
   const report = useSelector<any, ReportObject>(state => {
     const resourceType = dashboardId

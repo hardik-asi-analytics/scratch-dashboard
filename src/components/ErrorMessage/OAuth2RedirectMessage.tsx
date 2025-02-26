@@ -102,7 +102,7 @@ function OAuth2RedirectMessage({
     state => state.dashboardInfo?.id,
   );
 
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
 
   useEffect(() => {
     /* Listen for messages from the OAuth2 tab.
