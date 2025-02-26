@@ -72,7 +72,6 @@ import {
   DEFAULT_SORT_COMPARATOR,
 } from './constants';
 import { customTagRender } from './CustomTag';
-import { BaseSelectRef } from 'rc-select';
 
 /**
  * This component is a customized version of the Antdesign 4.X Select component
@@ -265,7 +264,7 @@ const Select = forwardRef(
             }
             return [
               SELECT_ALL_VALUE,
-              ...selectAllEligible.map(opt => opt.value != null ? ({ label: String(opt.value), value: opt.value }) : null),
+              ...selectAllEligible.map(opt => opt.value),
             ] as AntdLabeledValue[];
           }
           if (!hasOption(value, array)) {
@@ -300,7 +299,7 @@ const Select = forwardRef(
               labelInValue
                 ? { label: option.label, value: option.value }
                 : option.value,
-            ) as RawValue[]
+            ),
         );
       }
       fireOnChange();
@@ -434,7 +433,7 @@ const Select = forwardRef(
           labelInValue ? option : option.value,
         );
         optionsToSelect.push(labelInValue ? selectAllOption : SELECT_ALL_VALUE);
-        setSelectValue(optionsToSelect as AntdLabeledValue[]);
+        setSelectValue(optionsToSelect);
         fireOnChange();
       }
     }, [
@@ -655,7 +654,7 @@ const Select = forwardRef(
           oneLine={oneLine}
           tagRender={customTagRender}
           {...props}
-          ref={ref as unknown as React.Ref<BaseSelectRef>}
+          ref={ref}
         >
           {selectAllEnabled && (
             <Option

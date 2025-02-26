@@ -24,11 +24,9 @@ export { TooltipProps, TooltipPlacement };
 
 export const Tooltip = ({ overlayStyle, ...props }: TooltipProps) => (
   <AntdTooltip
-    style={{
-      // body: { 
-        overflow: 'hidden', textOverflow: 'ellipsis'
-      //  },
-      // root: overlayStyle ?? {},
+    styles={{
+      body: { overflow: 'hidden', textOverflow: 'ellipsis' },
+      root: overlayStyle ?? {},
     }}
     color={`${supersetTheme.colors.grayscale.dark2}e6`}
     {...props}

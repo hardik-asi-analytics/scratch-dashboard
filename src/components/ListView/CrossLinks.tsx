@@ -18,6 +18,7 @@
  */
 import { memo, useMemo } from 'react';
 import { styled, useTruncation } from '@superset-ui/core';
+import { Link } from 'react-router-dom';
 import CrossLinksTooltip from './CrossLinksTooltip';
 
 export type CrossLinkProps = {
@@ -74,10 +75,10 @@ function CrossLinks({
   const links = useMemo(
     () => (
       <span className="truncated" ref={crossLinksRef} data-test="crosslinks">
-        {crossLinks.map((link, index) => (''
-          // <Link key={link.id} to={linkPrefix + link.id}>
-          //   {index === 0 ? link.title : `, ${link.title}`}
-          // </Link>
+        {crossLinks.map((link, index) => (
+          <Link key={link.id} to={linkPrefix + link.id}>
+            {index === 0 ? link.title : `, ${link.title}`}
+          </Link>
         ))}
       </span>
     ),

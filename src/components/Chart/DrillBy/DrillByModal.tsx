@@ -31,6 +31,7 @@ import {
   AdhocFilter,
 } from '@superset-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Modal from 'src/components/Modal';
 import Loading from 'src/components/Loading';
 import Button from 'src/components/Button';
@@ -118,7 +119,7 @@ const ModalFooter = ({ formData, closeModal }: ModalFooterProps) => {
             : undefined
         }
       >
-        {/* <Link
+        <Link
           css={css`
             &:hover {
               text-decoration: none;
@@ -127,7 +128,7 @@ const ModalFooter = ({ formData, closeModal }: ModalFooterProps) => {
           to={url}
         >
           {t('Edit chart')}
-        </Link> */}
+        </Link>
       </Button>
 
       <Button

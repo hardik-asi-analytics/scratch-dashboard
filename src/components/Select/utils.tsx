@@ -104,8 +104,7 @@ export const sortSelectedFirstHelper = (
     | RawValue[]
     | AntdLabeledValue
     | AntdLabeledValue[]
-    | undefined
-    | null,
+    | undefined,
 ) =>
   selectValue && a.value !== undefined && b.value !== undefined
     ? Number(hasOption(b.value, selectValue)) -

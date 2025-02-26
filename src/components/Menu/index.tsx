@@ -138,14 +138,14 @@ const StyledSubMenu = styled(AntdMenu.SubMenu)`
 export type MenuMode = AntdMenuProps['mode'];
 export type MenuItem = Required<AntdMenuProps>['items'][number];
 
-export const Menu: any = Object.assign(StyledMenu, {
+export const Menu = Object.assign(StyledMenu, {
   Item: StyledMenuItem,
   SubMenu: StyledSubMenu,
   Divider: AntdMenu.Divider,
   ItemGroup: AntdMenu.ItemGroup,
 });
 
-export const MainNav: any = Object.assign(StyledNav, {
+export const MainNav = Object.assign(StyledNav, {
   Item: StyledMenuItem,
   SubMenu: StyledSubMenu,
   Divider: AntdMenu.Divider,

@@ -371,7 +371,7 @@ const DropdownContainer = forwardRef(
               content={popoverContent}
               trigger="click"
               open={popoverVisible}
-              onOpenChange={(visible: any) => setPopoverVisible(visible)}
+              onOpenChange={visible => setPopoverVisible(visible)}
               placement="bottom"
               forceRender={forceRender}
             >

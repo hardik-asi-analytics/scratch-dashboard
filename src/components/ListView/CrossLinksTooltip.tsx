@@ -19,6 +19,7 @@
 import { ReactNode } from 'react';
 import { styled, t } from '@superset-ui/core';
 import { Tooltip } from 'src/components/Tooltip';
+import { Link } from 'react-router-dom';
 
 export type CrossLinksTooltipProps = {
   children: ReactNode;
@@ -48,16 +49,16 @@ export default function CrossLinksTooltip({
       title={
         show && (
           <StyledLinkedTooltip>
-            {crossLinks.map(link => (''
-              // <Link
-              //   className="link"
-              //   key={link.to}
-              //   to={link.to}
-              //   target="_blank"
-              //   rel="noreferer noopener"
-              // >
-              //   {link.title}
-              // </Link>
+            {crossLinks.map(link => (
+              <Link
+                className="link"
+                key={link.to}
+                to={link.to}
+                target="_blank"
+                rel="noreferer noopener"
+              >
+                {link.title}
+              </Link>
             ))}
             {moreItems && (
               <span data-test="plus-more">{t('+ %s more', moreItems)}</span>

@@ -19,7 +19,7 @@
 import AntdForm, { FormProps } from 'antd/lib/form';
 import { styled } from '@superset-ui/core';
 
-const StyledForm: any = styled(AntdForm)`
+const StyledForm = styled(AntdForm)`
   &.ant-form label {
     font-size: ${({ theme }) => theme.typography.sizes.s}px;
   }

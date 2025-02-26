@@ -84,7 +84,6 @@ import {
   DEFAULT_SORT_COMPARATOR,
 } from './constants';
 import { customTagRender } from './CustomTag';
-import { BaseSelectRef } from 'rc-select';
 
 const Error = ({ error }: { error: string }) => (
   <StyledError>
@@ -638,7 +637,7 @@ const AsyncSelect = forwardRef(
           oneLine={oneLine}
           tagRender={customTagRender}
           {...props}
-          ref={ref as unknown as React.Ref<BaseSelectRef>}
+          ref={ref}
         >
           {hasCustomLabels(fullSelectOptions) &&
             renderSelectOptions(fullSelectOptions)}

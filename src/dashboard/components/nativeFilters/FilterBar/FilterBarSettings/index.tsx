@@ -171,7 +171,7 @@ const FilterBarSettings = () => {
         <StyledCheckbox
           className="enable-cross-filters"
           checked={crossFiltersEnabled}
-          onChange={checked => setCrossFiltersEnabled(checked || false)}
+          onChange={(checked:any) => setCrossFiltersEnabled(checked || false)}
         />{' '}
         <span className="enable-cross-filters-text">
           {t('Enable cross-filtering')}
