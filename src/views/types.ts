@@ -1,4 +1,4 @@
-/*
+/**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -16,23 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+import { NotificationMethodOption } from 'src/features/alerts/types';
 
-import { validateNumber } from '@superset-ui/core';
-import './setup';
-
-describe('validateNumber()', () => {
-  it('returns the warning message if invalid', () => {
-    expect(validateNumber(NaN)).toBeTruthy();
-    expect(validateNumber(Infinity)).toBeTruthy();
-    expect(validateNumber(undefined)).toBeTruthy();
-    expect(validateNumber(null)).toBeTruthy();
-    expect(validateNumber('abc')).toBeTruthy();
-    expect(validateNumber('')).toBeTruthy();
-  });
-  it('returns false if the input is valid', () => {
-    expect(validateNumber(0)).toBeFalsy();
-    expect(validateNumber(10.1)).toBeFalsy();
-    expect(validateNumber(10)).toBeFalsy();
-    expect(validateNumber('10')).toBeFalsy();
-  });
-});
+export interface ViewState {
+  common: {
+    conf: {
+      SQLALCHEMY_DOCS_URL: string;
+      SQLALCHEMY_DISPLAY_TEXT: string;
+      ALERT_REPORTS_NOTIFICATION_METHODS: NotificationMethodOption[];
+    };
+    currencies: string[];
+  };
+  messageToast: Array<Object>;
+}

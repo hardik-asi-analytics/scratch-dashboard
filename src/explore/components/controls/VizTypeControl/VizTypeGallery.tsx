@@ -549,8 +549,8 @@ export default function VizTypeGallery(props: VizTypeGalleryProps) {
     }
     return fuse
       .search(searchInputValue)
-      .map(result => result.item)
-      .sort((a, b) => {
+      .map((result: any) => result.item)
+      .sort((a: any, b: any) => {
         const aLabel = a.value?.label;
         const bLabel = b.value?.label;
         const aOrder =
@@ -573,7 +573,7 @@ export default function VizTypeGallery(props: VizTypeGalleryProps) {
   }, []);
 
   const changeSearch: ChangeEventHandler<HTMLInputElement> = useCallback(
-    event => setSearchInputValue(event.target.value),
+    (event: any) => setSearchInputValue(event.target.value),
     [],
   );
 

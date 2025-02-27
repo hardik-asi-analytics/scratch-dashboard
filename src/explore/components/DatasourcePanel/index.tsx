@@ -201,7 +201,7 @@ export default function DataSourcePanel({
           threshold: rankings.CONTAINS,
         },
         {
-          key: item =>
+          key: (item: any) =>
             [item?.description ?? '', item?.expression ?? ''].map(
               x => x?.replace(/[_\n\s]+/g, ' ') || '',
             ),
@@ -228,7 +228,7 @@ export default function DataSourcePanel({
           threshold: rankings.CONTAINS,
         },
         {
-          key: item =>
+          key: (item: any) =>
             [item?.description ?? '', item?.expression ?? ''].map(
               x => x?.replace(/[_\n\s]+/g, ' ') || '',
             ),
@@ -237,7 +237,7 @@ export default function DataSourcePanel({
         },
       ],
       keepDiacritics: true,
-      baseSort: (a, b) =>
+      baseSort: (a: any, b: any) =>
         Number(b?.item?.is_certified ?? 0) -
           Number(a?.item?.is_certified ?? 0) ||
         String(a?.rankedValue ?? '').localeCompare(b?.rankedValue ?? ''),
